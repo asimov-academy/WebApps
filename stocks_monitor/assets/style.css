@@ -1,0 +1,255 @@
+/*Imports das fontes de textos*/
+@font-face {
+    font-family: 'Nexa';
+    src: url('nexa-extralight.ttf') format('truetype'),
+       url('nexa-extralight.woff2') format('woff2'),
+       url('nexa-extralight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NexaRegular';
+    src: url('nexa-regular.otf') format('truetype'),
+       url('nexa-regular.woff2') format('woff2'),
+       url('nexa-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Estilização do background do dashboard*/
+body{
+    background: linear-gradient(#100731, #100731, #0E112D, #0E112D) fixed;
+}
+
+/*Estilização do header*/
+.header_icon{
+    background-color : transparent;
+    border-color : transparent;
+    color : rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    padding: 0;
+    font-family: Nexa;
+}
+.header_icon:hover{
+    transition: 0.4s ease-out;
+    color: white ;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+/*Estilização dos cards da fixed_row*/
+.card1_linha1{
+    background-color: transparent;
+    color: rgba(255,255,255,1);;
+    border: transparent;
+}
+.card2_linha1{
+    background-color: transparent;
+    border-color: transparent;
+}
+.cards_linha2{
+    background-color: rgba(32, 36, 73);
+}
+.cardRadar{
+    background-color: transparent;
+    color: white;
+    border: transparent;
+}
+
+/*Estilização dos botões switchs e radio buttons*/
+.form-check-input{
+    background-color: #202449;
+    border-color: rgba(255,255,255,0.2);
+}
+.form-check-input:checked {
+    background-color: #b22db2;
+    border-color: #b22db2;
+}
+
+/* Estilização do menu dropdown do line graph.
+Até daria pra alterar algumas caracteristicas do dropdown diretamente no dcc.dropdown, mas algumas só consegui pelo css, entao preferi alterar tudo por aqui pra centralizar as edições aqui */
+.Select-control {
+    background-color: #202449 !important;
+    border-color: rgba(255,255,255,0.2);
+    color: white;
+}
+.is-open>.Select-control{
+    border-color: rgba(255,255,255,0.1);
+}
+.is-focused:not(.is-open)>.Select-control{
+    border-color: #b22db2;
+}
+.Select-menu-outer {
+    background-color: #202449;
+    border-color: rgba(255,255,255,0.1);
+    color: #b22db2;
+}
+.Select--multi .Select-value{
+    color: #b22db2;
+    border-color: #b22db2;
+}
+.Select-value-icon{
+    color: #b22db2 ;
+    border-color: #b22db2 !important;
+}
+.Select-value-icon:hover{
+    color: red !important;
+}
+
+/* Estilização das fontes: cores, tamanhos e famlias*/
+.textoPrincipal{
+    font-size: 3.8rem;
+    color: white;
+    font-family: NexaRegular;
+}
+.textoSecundario{
+    font-size: 1.8rem;
+    color: white;
+    font-family: NexaRegular;
+}
+.textoTerciario{
+    font-size: 1.4rem;
+    color: white;
+    font-family: NexaRegular;
+}
+.textoTerciarioSwitchLineGraph{
+    font-size: 1.4rem;
+    color: white;
+}
+.textoQuartenario{
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.4);
+    display: inline;
+    font-family: NexaRegular;
+}
+.textoQuartenarioBranco{
+    font-size: 1.2rem;
+    color: white;
+    display: inline;
+    font-family: NexaRegular;
+}
+.textoQuartenarioVerde{
+    font-size: 1.2rem;
+    color: rgba(8,180,164,1);
+    font-family: Nexa;
+}
+.textoQuartenarioVermelho{
+    font-size: 1.2rem;
+    color: rgba(255,0,0, 0.7);
+    font-family: Nexa;
+}
+h5 {
+    display: inline;
+}
+
+/* Estilização graph line*/
+.graph_line{
+    height: 530px;
+}
+.graph_cards{
+    height: 40px;
+}
+
+/* Estilização dos cards da wallet*/
+.card_compra{
+    border-left-width: 10px;
+    border-left-color: rgba(8,180,164,1);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+.card_venda{
+    border-left-width: 10px;
+    border-left-color: rgba(255,0,0, 0.7);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+.card_sem_registros{
+    background-color: transparent;
+    color: white;
+}
+
+/* estilização do scroll*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(255,255,255, 0.5);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    height: 30px;
+    background: #0E112D; 
+}
+
+/* estilização do modal*/
+.modal_header{
+    background: #110D31;
+    color: white;
+}
+.modal{
+    --bs-modal-header-border-color: #343b3e;
+    --bs-modal-footer-border-color: #343b3e;
+}
+.btn-close{
+    background-image:url(https://icon-library.com/images/x-icon-white/x-icon-white-7.jpg);
+}
+.modal_body{
+    background: #110D31;
+    color: white;
+}
+.modal_footer{
+    background:  #110D31;
+}
+.modal-content{
+    background-color: transparent;
+    border-color: #343b3e;
+    border-width: 1px;
+}
+#submit_cadastro{
+    background-color: rgba(178, 45, 178, 1);
+    border-color: transparent;
+}
+#submit_cadastro:hover{
+    background-color: rgba(178, 45, 178, 0.8);
+}
+#nome_ativo{
+    background-color: rgba(255,255, 255, 0.1);
+    border-color: rgba(255,255, 255, 0.1);
+    color: white;
+}
+#nome_ativo::placeholder{
+    color: rgba(255,255, 255, 0.3);
+}
+#preco_ativo{
+    background-color: rgba(255,255, 255, 0.1);
+    border-color: rgba(255,255, 255, 0.1);
+    color: white;
+}
+#preco_ativo::placeholder{
+    color: rgba(255,255, 255, 0.3);
+}
+#quantidade_ativo{
+    background-color: rgba(255,255, 255, 0.1);
+    border-color: rgba(255,255, 255, 0.1);
+    color: white;
+}
+#quantidade_ativo::placeholder{
+    color: rgba(255,255, 255, 0.3);
+}
+.DateInput_input{
+    background-color: #292646;
+    color: rgba(255,255, 255, 1);
+}
+.SingleDatePickerInput{
+    border-color: #292646;
+}
+
+/* Estilização ícones lixeira dos cards da wallet */
+.fa-trash{
+    color : rgba(255, 255, 255, 0.6);
+}
+.fa-trash:hover{
+    transition: 0.2s ease-out;
+    color: white ;
+}
